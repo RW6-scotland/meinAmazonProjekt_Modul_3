@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class eBooks extends Medium{
 
@@ -21,6 +22,7 @@ public class eBooks extends Medium{
     }
 
     public void setIsbn(String isbn) {
+        Objects.requireNonNull(isbn);
         this.isbn = isbn;
     }
 
@@ -29,7 +31,11 @@ public class eBooks extends Medium{
     }
 
     public void setSeitenanzahl(int seitenanzahl) {
-        this.seitenanzahl = seitenanzahl;
+        if(seitenanzahl==0){
+            throw new RuntimeException("Der Wert darf nicht 0 sein!");
+        }else {
+            this.seitenanzahl = seitenanzahl;
+        }
     }
 
     public String getAuflage() {
@@ -37,6 +43,7 @@ public class eBooks extends Medium{
     }
 
     public void setAuflage(String auflage) {
+        Objects.requireNonNull(auflage);
         this.auflage = auflage;
     }
 

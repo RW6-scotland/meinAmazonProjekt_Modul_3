@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Filme extends Medium{
 
@@ -18,7 +19,11 @@ public class Filme extends Medium{
     }
 
     public void setSpielzeit(double spielzeit) {
-        this.spielzeit = spielzeit;
+        if (spielzeit == 0) {
+            throw new RuntimeException("Der Wert darf nicht 0 sein!");
+        }else {
+            this.spielzeit = spielzeit;
+        }
     }
 
     public String getAufloesung() {
@@ -26,6 +31,7 @@ public class Filme extends Medium{
     }
 
     public void setAufloesung(String aufloesung) {
+        Objects.requireNonNull(aufloesung);
         this.aufloesung = aufloesung;
     }
 

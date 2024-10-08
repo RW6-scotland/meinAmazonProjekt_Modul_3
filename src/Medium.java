@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Medium {
 
@@ -13,11 +14,11 @@ public class Medium {
     private LocalDate erscheinungsdatum;
 
     public Medium(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum) {
-        this.titel = titel;
-        this.urheber = urheber;
-        this.genre = genre;
-        this.kommentar = kommentar;
-        this.erscheinungsdatum = erscheinungsdatum;
+        setTitel(titel);
+        setGenre(genre);
+        setErscheinungsdatum(erscheinungsdatum);
+        setUrheber(urheber);
+        setKommentar(kommentar);
     }
 
     public String getTitel() {
@@ -25,6 +26,7 @@ public class Medium {
     }
 
     public void setTitel(String titel) {
+        Objects.requireNonNull(titel);
         this.titel = titel;
     }
 
@@ -33,6 +35,7 @@ public class Medium {
     }
 
     public void setUrheber(Urheber urheber) {
+        Objects.requireNonNull(urheber);
         this.urheber = urheber;
     }
 
@@ -41,6 +44,7 @@ public class Medium {
     }
 
     public void setGenre(Genre genre) {
+        Objects.requireNonNull(genre);
         this.genre = genre;
     }
 
@@ -49,6 +53,7 @@ public class Medium {
     }
 
     public void setKommentar(String kommentar) {
+        Objects.requireNonNull(kommentar);
         this.kommentar = kommentar;
     }
 
@@ -57,6 +62,7 @@ public class Medium {
     }
 
     public void setErscheinungsdatum(LocalDate erscheinungsdatum) {
+        Objects.requireNonNull(erscheinungsdatum);
         this.erscheinungsdatum = erscheinungsdatum;
     }
 

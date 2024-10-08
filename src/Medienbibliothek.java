@@ -8,4 +8,16 @@ public class Medienbibliothek {
     {
         medien.add(a);
     }
+
+    public void anzeigen(){
+        for(Medium m : medien){
+            m.anzeigen();
+        }
+    }
+
+    public void titelAnzeigen(){
+        for(Medium m : medien){
+            m.getTitel();
+        }
+    }
 }

@@ -28,4 +28,11 @@ public class Filme extends Medium{
     public void setAuflösung(String auflösung) {
         this.auflösung = auflösung;
     }
+
+    public void anzeigen(){
+        super.anzeigen();
+        System.out.println("Regisseur: " + this.getUrheber());
+        System.out.println("Spielzeit: " + this.spielzeit);
+        System.out.println("Auflösung: " + this.auflösung);
+    }
 }

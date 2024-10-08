@@ -61,8 +61,9 @@ public class Medium {
     }
 
     public void anzeigen(){
+        System.out.println("Titel: " + this.titel);
         System.out.println("Erscheinungsdatum: " + this.erscheinungsdatum);
         System.out.println("Kommentar: " + this.kommentar);
-        System.out.println("Titel: " + this.titel);
+        System.out.println("Genre: " + this.genre);
     }
 }

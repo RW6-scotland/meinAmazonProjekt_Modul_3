@@ -39,4 +39,12 @@ public class eBooks extends Medium{
     public void setAuflage(String auflage) {
         this.auflage = auflage;
     }
+
+    public void anzeigen(){
+        super.anzeigen();
+        System.out.println("ISBN: " + this.isbn);
+        System.out.println("Seitenanzahl: " + this.seitenanzahl);
+        System.out.println("Auflage: " + this.auflage);
+        System.out.println("Autor: " + this.getUrheber());
+    }
 }

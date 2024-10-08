@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Medienbibliothek {
 
-    private ArrayList<Medium> medien;
+    private ArrayList<Medium> medien = new ArrayList<>();
 
-    public void mediumHinzufügen(Medium a)
+    public void mediumHinzufugen(Medium a)
     {
         medien.add(a);
     }
@@ -12,12 +12,13 @@ public class Medienbibliothek {
     public void anzeigen(){
         for(Medium m : medien){
             m.anzeigen();
+            System.out.println("************");
         }
     }
 
     public void titelAnzeigen(){
         for(Medium m : medien){
-            m.getTitel();
+            System.out.println(m.getTitel());
         }
     }
 }

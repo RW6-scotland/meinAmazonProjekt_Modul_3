@@ -4,13 +4,13 @@ public class Filme extends Medium{
 
     private double spielzeit;
 
-    private String auflösung;
+    private String aufloesung;
 
 
-    public Filme(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum, double spielzeit, String auflösung) {
+    public Filme(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum, double spielzeit, String aufloesung) {
         super(titel, urheber, genre, kommentar, erscheinungsdatum);
         setSpielzeit(spielzeit);
-        setAuflösung(auflösung);
+        setAufloesung(aufloesung);
     }
 
     public double getSpielzeit() {
@@ -21,18 +21,18 @@ public class Filme extends Medium{
         this.spielzeit = spielzeit;
     }
 
-    public String getAuflösung() {
-        return auflösung;
+    public String getAufloesung() {
+        return aufloesung;
     }
 
-    public void setAuflösung(String auflösung) {
-        this.auflösung = auflösung;
+    public void setAufloesung(String aufloesung) {
+        this.aufloesung = aufloesung;
     }
 
     public void anzeigen(){
         super.anzeigen();
         System.out.println("Regisseur: " + this.getUrheber());
-        System.out.println("Spielzeit: " + this.spielzeit);
-        System.out.println("Auflösung: " + this.auflösung);
+        System.out.println("Länge in Minuten: " + this.spielzeit);
+        System.out.println("Aufloesung: " + this.aufloesung);
     }
 }

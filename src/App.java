@@ -7,5 +7,11 @@ public class App {
 
         Medienbibliothek medienbibliothek1 = new Medienbibliothek();
 
+        medienbibliothek1.mediumHinzufugen(film1);
+        medienbibliothek1.mediumHinzufugen(buch1);
+
+        medienbibliothek1.anzeigen();
+
+        medienbibliothek1.titelAnzeigen();
     }
 }

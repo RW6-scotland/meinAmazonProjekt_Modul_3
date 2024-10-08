@@ -7,7 +7,7 @@ public class Filme extends Medium{
     private String auflösung;
 
 
-    public Filme(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum,double spielzeit, String auflösung) {
+    public Filme(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum, double spielzeit, String auflösung) {
         super(titel, urheber, genre, kommentar, erscheinungsdatum);
         setSpielzeit(spielzeit);
         setAuflösung(auflösung);

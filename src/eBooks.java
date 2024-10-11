@@ -11,6 +11,7 @@ public class eBooks extends Medium{
 
     public eBooks(String titel, Urheber urheber, Genre genre, String kommentar, LocalDate erscheinungsdatum, String isbn, int seitenanzahl, String auflage)
     {
+
         super(titel, urheber, genre, kommentar, erscheinungsdatum);
         setIsbn(isbn);
         setSeitenanzahl(seitenanzahl);
